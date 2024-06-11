@@ -58,35 +58,33 @@ const Product = () => {
   };
 
   const links = products.map((product) => (
-    <>
-      <div className="card" key={product.id}>
-        <img src={abbos} alt={product.name} />
-        <div className="pr_title">
-          <h1>{product.title}</h1>
-          <p className="price">{product.price}$</p>
-        </div>
-        <h3>{product.name}</h3>
-        <p>{product.description}</p>
+    <div className="card" key={product.id}>
+      <img src={abbos} alt={product.name} />
+      <div className="pr_title">
+        <h1>{product.title}</h1>
+        <p className="price">{product.price}$</p>
+      </div>
+      <h3>{product.name}</h3>
+      <p>{product.description}</p>
 
-        <div className="delet">
-          <div className="delet_all">
-            <button onClick={() => handleDeleteProduct(product.id)}>
-              Delete
-            </button>
-          </div>
-          <div className="delet_all1">
-            <button
-              onClick={() => {
-                setProduct(product);
-                setEdit(false);
-              }}
-            >
-              Edit
-            </button>
-          </div>
+      <div className="delet">
+        <div className="delet_all">
+          <button onClick={() => handleDeleteProduct(product.id)}>
+            Delete
+          </button>
+        </div>
+        <div className="delet_all1">
+          <button
+            onClick={() => {
+              setProduct(product);
+              setEdit(false);
+            }}
+          >
+            Edit
+          </button>
         </div>
       </div>
-    </>
+    </div>
   ));
 
   return (
